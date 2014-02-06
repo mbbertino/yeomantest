@@ -60,4 +60,8 @@ function Collection (models) {
 		var success = 'You have emptied the array, YAY!, Maybe?!?!?!'
 		return success
 	} 
+	this.random = function(){
+		var randomStudent = _.sample(this.models)
+		return randomStudent
+	}
 }

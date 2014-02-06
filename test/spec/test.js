@@ -115,13 +115,13 @@
                 var toBeAdded = [{name: 'Bower', id: '1'},{name: 'Jack', id: '2'},{name: 'Jimmy', id: '3'}];
                 var students = new Collection(toBeAdded);
 
-                expect(students.random()).to.eql({})
+                expect(toBeAdded).to.include(students.random())
                 });
-            it("should return a string", function(){
+            it("should return an object", function(){
                 var toBeAdded = [{name: 'Bower', id: '1'},{name: 'Jack', id: '2'},{name: 'Jimmy', id: '3'}];
                 var students = new Collection(toBeAdded);
 
-                expect(students.random()).to.be.a("string")
+                expect(students.random()).to.be.a('object')
                 });
             });
         describe('has an .length() method', function() {
