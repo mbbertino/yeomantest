@@ -91,22 +91,26 @@
                 expect(students.remove('2')).to.eql(true)
             });
         })
+
+// this is the thursday night homework...
+
         describe('has an .empty() method', function() {
             it("should return an empty models array", function(){
                 var toBeAdded = [{name: 'Bower', id: '1'},{name: 'Jack', id: '2'},{name: 'Jimmy', id: '3'}];
                 var students = new Collection(toBeAdded);
                 students.empty();
 
-                expect(student.models).to.equal([])
+                expect(students.models).to.eql([])
                 });
             it("should return successful empty upon completetion", function(){
                 var toBeAdded = [{name: 'Bower', id: '1'},{name: 'Jack', id: '2'},{name: 'Jimmy', id: '3'}];
                 var students = new Collection(toBeAdded);
 
-                expect(students.empty()).to.eql(true)
+                expect(students.empty()).to.eql('You have emptied the array, YAY!, Maybe?!?!?!')
                 });
             });
         describe('has an .random() method', function() {
+
             it("should select an object literal within this.models", function(){
                 var toBeAdded = [{name: 'Bower', id: '1'},{name: 'Jack', id: '2'},{name: 'Jimmy', id: '3'}];
                 var students = new Collection(toBeAdded);

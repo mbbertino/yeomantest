@@ -53,4 +53,11 @@ function Collection (models) {
 								// return model.id = id;
 								// })
 	}
+
+	this.empty = function(){
+		this.models = []
+
+		var success = 'You have emptied the array, YAY!, Maybe?!?!?!'
+		return success
+	} 
 }
