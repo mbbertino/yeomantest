@@ -90,8 +90,50 @@
 
                 expect(students.remove('2')).to.eql(true)
             });
-
         })
+        describe('has an .empty() method', function() {
+            it("should return an empty models array", function(){
+                var toBeAdded = [{name: 'Bower', id: '1'},{name: 'Jack', id: '2'},{name: 'Jimmy', id: '3'}];
+                var students = new Collection(toBeAdded);
+                students.empty();
+
+                expect(student.models).to.equal([])
+                });
+            it("should return successful empty upon completetion", function(){
+                var toBeAdded = [{name: 'Bower', id: '1'},{name: 'Jack', id: '2'},{name: 'Jimmy', id: '3'}];
+                var students = new Collection(toBeAdded);
+
+                expect(students.empty()).to.eql(true)
+                });
+            });
+        describe('has an .random() method', function() {
+            it("should select an object literal within this.models", function(){
+                var toBeAdded = [{name: 'Bower', id: '1'},{name: 'Jack', id: '2'},{name: 'Jimmy', id: '3'}];
+                var students = new Collection(toBeAdded);
+
+                expect(students.random()).to.eql({})
+                });
+            it("should return a string", function(){
+                var toBeAdded = [{name: 'Bower', id: '1'},{name: 'Jack', id: '2'},{name: 'Jimmy', id: '3'}];
+                var students = new Collection(toBeAdded);
+
+                expect(students.random()).to.be.a("string")
+                });
+            });
+        describe('has an .length() method', function() {
+            it("should the length of the array", function(){
+                var toBeAdded = [{name: 'Bower', id: '1'},{name: 'Jack', id: '2'},{name: 'Jimmy', id: '3'}];
+                var students = new Collection(toBeAdded);
+
+                expect(students.models.length()).to.eql(3)
+                });
+            it("should be a number", function(){
+                var toBeAdded = [{name: 'Bower', id: '1'},{name: 'Jack', id: '2'},{name: 'Jimmy', id: '3'}];
+                var students = new Collection(toBeAdded);
+
+                expect(students.length()).to.be.a("number")
+                });
+            });
     });
 })();
 

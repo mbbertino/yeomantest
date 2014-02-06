@@ -31,6 +31,8 @@ function Collection (models) {
 		var result;
 		var success;
 
+// if(_.isString(id) == false) //this is another way of doing this
+
 		if (typeof(id) != 'string') {
       throw new Error("Whoops!");
     }
@@ -46,5 +48,9 @@ function Collection (models) {
 		success = true
 		return success
 
+// better way to do this
+	// this.models = _.reject(this.models, function(model){
+								// return model.id = id;
+								// })
 	}
 }
