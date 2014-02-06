@@ -64,4 +64,8 @@ function Collection (models) {
 		var randomStudent = _.sample(this.models)
 		return randomStudent
 	}
+	this.length = function(){
+		var lengthOfArray = this.models.length
+		return lengthOfArray
+	}
 }

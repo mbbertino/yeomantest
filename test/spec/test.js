@@ -129,7 +129,7 @@
                 var toBeAdded = [{name: 'Bower', id: '1'},{name: 'Jack', id: '2'},{name: 'Jimmy', id: '3'}];
                 var students = new Collection(toBeAdded);
 
-                expect(students.models.length()).to.eql(3)
+                expect(students.length()).to.eql(3)
                 });
             it("should be a number", function(){
                 var toBeAdded = [{name: 'Bower', id: '1'},{name: 'Jack', id: '2'},{name: 'Jimmy', id: '3'}];
